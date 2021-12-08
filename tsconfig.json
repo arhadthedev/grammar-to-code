@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "lib",
+    "strict": true,
+    "target": "es6"
+  }
+}

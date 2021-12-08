@@ -23,12 +23,23 @@
     "parser-generator",
     "syntax"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "bin": {
     "grammar-to-code": "bin/grammar-to-code.mjs"
   },
+  "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
   "dependencies": {
     "command-line-args": "^5.2.0",
     "command-line-usage": "^6.1.1",
     "get-stdin": "^9.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
   }
 }

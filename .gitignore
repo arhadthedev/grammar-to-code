@@ -1,2 +1,6 @@
 # NPM installation artifacts
 node_modules/
+
+# TypeScript compilation artifacts
+dist/
+tsconfig.tsbuildinfo
