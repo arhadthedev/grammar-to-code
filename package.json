@@ -22,5 +22,13 @@
     "javascript",
     "parser-generator",
     "syntax"
-  ]
+  ],
+  "bin": {
+    "grammar-to-code": "bin/grammar-to-code.mjs"
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.0",
+    "command-line-usage": "^6.1.1",
+    "get-stdin": "^9.0.0"
+  }
 }
