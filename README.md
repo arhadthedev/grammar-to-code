@@ -25,3 +25,13 @@ If installed with `npm -g` or called from `scripts` section of `package.json`, a
 ```
 $ grammar2code < grammar > code
 ```
+
+### API
+
+#### `PositionalError`
+
+When returned, indicates that an error happened and gives its location and description.
+
+#### `convertGrammarToCode(grammar: string): string | PositionalError`
+
+A wrapper around the conversion machinery that allows to do everything in a single call in a style of the CLI.

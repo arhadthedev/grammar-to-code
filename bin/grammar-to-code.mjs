@@ -9,8 +9,10 @@
 
 import commandLineArgs from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
+import { convertGrammarToCode } from '../dist/index.js';
 import getStdin from 'get-stdin';
 import { readFileSync } from 'node:fs';
+import { exit, stderr, stdout } from 'node:process';
 
 const optionDefinitions = [
     {
@@ -75,4 +77,11 @@ if (options.help) {
     printVersion();
 } else {
     const grammarDescription = getStdin();
+    const result = convertGrammarToCode(grammarDescription);
+    if (typeof result === 'string') {
+        stdout.write(result);
+    } else {
+        stderr.write(result);
+        exit(1);
+    }
 }
